@@ -1,10 +1,20 @@
-FROM golang:1.16-alpine3.13
+FROM golang:1.16-alpine
 
 RUN mkdir /app
 
 WORKDIR /app
 
 COPY . /app
+
+COPY go.mod go.sum ./
+
+RUN go mod download
+
+RUN go get -d github.com/gorilla/mux
+
+RUN go get -u gorm.io/driver/sqlite
+
+RUN go get -u gorm.io/gorm
 
 RUN go build -o main .
 
