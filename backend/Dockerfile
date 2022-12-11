@@ -6,6 +6,8 @@ WORKDIR /app
 
 COPY . /app
 
+RUN go get -d github.com/gorilla/mux
+
 RUN go build -o main .
 
 EXPOSE 8080
