@@ -26,7 +26,21 @@ The application is in the early stage of development and you have that engineer'
 # Your Answers
 
 ## Question 3
+To start with we will do the sanity testing of the application by loading the applictation in the browser in this case and observe the time its taking to load the application.
+
+once the application is loaded we will see if the UI is alligned as per specs with respect to Pain au Chocolat, Croque monsieur and Box of Macarons of all the menu items.
+
+Next, Start the first steps in identifying the functionalities of the application by walking through the items in the menu as provided in this application and then we will develop the input data depending on the specifications and we will figure out the output keeping application specifications and will examine the outputs by comparing actual and expected results.
+
+Next steps would Regression testing and then followed by load testing and we can automate all these check by automation with selenim.
 
 ## Question 4
+Sorry about this question as i couldnt able to build the backend image . I am facing issues with sqlite db when build a docker image of backend app.
 
 ## Question 5
+The applications will be deployed to AWS. I use blue-green deployement strategy and the tools  use for this deployment is Elasticbeanstalk.
+1.For that we need to configure Dockerrun.aws.json which is similar to docker-compose file. because docker is multi container application so in aws we use ECS for that we need to add Dockerrun.aws.json file.
+2. push the code on Github.
+3. Integrate with Jenkins
+4. Host on AWS elastic Beanstalk.
+![architecture](https://user-images.githubusercontent.com/61916849/207135970-ef19553c-af56-4514-b5b1-9a4c660251cc.jpg)
