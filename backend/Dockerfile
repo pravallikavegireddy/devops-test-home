@@ -2,11 +2,11 @@ FROM golang:1.16-alpine
 
 RUN mkdir /app
 
-WORKDIR /app
-
 COPY . /app
 
-COPY go.mod go.sum ./
+WORKDIR /app/src
+
+COPY go.mod ./
 
 RUN go mod download
 
@@ -20,4 +20,4 @@ RUN go build -o main .
 
 EXPOSE 8080
 
-CMD ["/app/main"]
+CMD ["/app/src/main"]
